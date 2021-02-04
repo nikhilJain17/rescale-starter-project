@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" href="%PUBLIC_URL%/icon.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <title>Codebase Transfer Manager</title>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script>
+            // This is an example of using the contextBridge
+            window.api.receive("fromMain", (data) => {
+                console.log(`Received ${data} from main process`);
+            });
+            window.api.send("toMain", "some data");
+        </script>    
+    </body>
+</html>
