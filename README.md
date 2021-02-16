@@ -84,7 +84,8 @@ which will be attached as multipart/form-data in the body of the request. This w
 which you use to download your file later.
 
 ```
-/file/{fileId}
+Here you download files. Pass in the fileId from earlier as a parameter. 
+The key should be "file" and the value should be the fileId.
 ```
 where you download files. It expects the fileId returned from upload.
 
